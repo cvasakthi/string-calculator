@@ -11,7 +11,7 @@ export function StringCalculator(props: IStringCalculatorProps) {
     setEnteredString("");
   };
   return (
-    <div className="min-h-96 w-full max-w-md bg-white rounded shadow-lg p-5 space-y-3">
+    <div className="min-h-96 w-full flex flex-col max-w-md bg-white rounded shadow-lg p-5 space-y-3">
       <input
         type="text"
         className="w-full h-10 rounded border"
@@ -37,6 +37,9 @@ export function StringCalculator(props: IStringCalculatorProps) {
         >
           Reset
         </button>
+      </div>
+      <div className="min-h-full flex-1 bg-gray-100 rounded">
+    
       </div>
     </div>
   );
