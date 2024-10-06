@@ -2,6 +2,7 @@
 
 import { stringCalculator } from "./stringCalculator";
 
+
 describe("stringCalculator", () => {
   it("should return 0 for an empty string", () => {
     expect(stringCalculator("")).toBe(0);
@@ -20,7 +21,7 @@ describe("stringCalculator", () => {
   });
 
   it("should throw an error for negative numbers", () => {
-    expect(() => stringCalculator("1,-2,3")).toThrow("No Negative");
+    expect(() => stringCalculator("1,-2,3,-4")).toThrow("Negatives not allowed: -2, -4");
   });
 
   it("should ignore non-numeric values and still return the sum", () => {
