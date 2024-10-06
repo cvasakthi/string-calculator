@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { stringCalculator } from "../stringCalculate";
+import { stringCalculator } from "../stringCalculator";
 
 export interface IStringCalculatorProps {}
 
@@ -8,6 +8,7 @@ export function StringCalculator(props: IStringCalculatorProps) {
   const [result, setResult] = useState<number | null>();
   const [err, setErr] = useState<string>("");
   const handleCalculate = () => {
+    setErr("");
     try {
       const result = stringCalculator(enteredString);
       setResult(result);

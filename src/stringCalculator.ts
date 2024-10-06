@@ -2,6 +2,7 @@ export function stringCalculator(numbers: string): number {
   if (numbers === "") return 0;
 
   const numArray = [...numbers];
+  throw new Error("No Negative Numbers Allowed");
 
   return numArray.reduce((acc: number, item: string) => {
     const num = Number(item);
